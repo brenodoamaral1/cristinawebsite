@@ -1,32 +1,48 @@
-header{
-  font-size: 10px;
-  display: inline-block;
+nav{
+  height: 80px;
+  width: 100%;
 }
-body {
-  background-color: rgb(66, 66, 66);
+nav ul{
+  float: right;
+  margin-right: 140px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 25px;
+}
+nav ul li a{
+  color: rgb(189, 189, 189);
+  font-size: 22px;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(54, 54, 54);
+}
+a:visited{
+  text-decoration: none;
+  color: rgb(189, 189, 189);
 }
 .ouca {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  text-align: right;
+  padding-right: 10em;
+  padding-top: 7em;
+}
+#imgouca{
+  margin-right: 4em;
+  padding-bottom: 2em;
+}
+#imgfogao{
+  text-align: right;
+  transition: .3s;
+  height: 350px;
+}
+#imgfogao:hover {
+  transform:scale(1.1) 
 }
 
-/* Song Images */
-
-.songs{
-  text-align: center;
-}
-.song{
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-}
-@media screen and (max-width: 500px) {
-  .song {
-    width: 100%;
-  }
-}
 /* Background Video */
 
 html,body {
@@ -40,6 +56,10 @@ html,body {
     filter: brightness(50%);
     
 }
+
+/* Media Query */
+
+/* Background */
 @media (min-aspect-ratio: 16/9) {
     #videoBG {
         width:100%;
@@ -52,12 +72,32 @@ html,body {
         height: 100%;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     #videoBG {
-        display: none;
+      display: none;
+    }
+    .ouca {
+      text-align: right;
+      margin-left: 10em;
+      margin-right: 10em;
+     }
+    #imgouca{
+      height: 15em;
+      margin-left: 12em;
+      margin-right: 12em;
+      padding-bottom: 5em;
+    }
+    #imgfogao{
+      height: 60em;
     }
     body {
-      background: url('poster.jpg');
+      background: url('Media/Images/fogaodelenhaBG.png');
       background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      background-color: rgb(66, 66, 66);
   }
 }
+
+
