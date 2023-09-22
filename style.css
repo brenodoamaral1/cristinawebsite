@@ -1,21 +1,51 @@
-nav{
-  height: 80px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.nav {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
   width: 100%;
+  padding: 15px 160px;
 }
-nav ul{
-  float: right;
-  margin-right: 140px;
+.nav,
+.nav .nav-links {
+  display: flex;
+  align-items: center;
 }
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 25px;
+.nav {
+  justify-content: space-between;
 }
-nav ul li a{
-  color: rgb(189, 189, 189);
-  font-size: 22px;
+
+.nav{
+  font-size: 20px;
+  font-weight: 300;
 }
-a{
+.nav .nav-links {
+  column-gap: 40px;
+  list-style: none;
+}
+.nav .nav-links a {
+  transition: all 0.2s linear;
+}
+
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+  display: none;
+}
+
+.logo{
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+a {
+  color: #fff;
   text-decoration: none;
 }
 a:hover{
@@ -23,21 +53,16 @@ a:hover{
 }
 a:visited{
   text-decoration: none;
-  color: rgb(189, 189, 189);
 }
 .ouca {
-  text-align: right;
-  padding-right: 10em;
-  padding-top: 7em;
-}
-#imgouca{
-  margin-right: 4em;
-  padding-bottom: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 #imgfogao{
-  text-align: right;
   transition: .3s;
   height: 350px;
+  margin-top: 20px;
 }
 #imgfogao:hover {
   transform:scale(1.1) 
@@ -59,7 +84,6 @@ html,body {
 
 /* Media Query */
 
-/* Background */
 @media (min-aspect-ratio: 16/9) {
     #videoBG {
         width:100%;
@@ -76,28 +100,73 @@ html,body {
     #videoBG {
       display: none;
     }
-    .ouca {
-      text-align: right;
-      margin-left: 10em;
-      margin-right: 10em;
-     }
-    #imgouca{
-      height: 15em;
-      margin-left: 12em;
-      margin-right: 12em;
-      padding-bottom: 5em;
-    }
-    #imgfogao{
-      height: 60em;
-    }
     body {
-      background: url('Media/Images/fogaodelenhaBG.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center center;
-      background-color: rgb(66, 66, 66);
+      height: 100%;
+      background-color: rgb(54, 54, 54);
+  }
+  .logo{
+    text-align: left;
+  }
+  .ouca{
+    padding-top: 50px;
+  }
+  #imgfogao{
+    height: 300px;
   }
 }
 
+
+/* responsive */
+@media screen and (max-width: 1160px) {
+  .nav {
+    padding: 15px 100px;
+    background: #292929;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+@media screen and (max-width: 950px) {
+  .nav {
+    padding: 15px 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: block;
+  }
+  .nav {
+    padding: 15px 20px;
+  }
+  .nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    max-width: 280px;
+    width: 100%;
+    padding-top: 100px;
+    row-gap: 30px;
+    flex-direction: column;
+    background-color: #292929;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 100;
+  }
+  .nav.openNav .nav-links {
+    left: 0;
+  }
+  .nav .navOpenBtn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
 

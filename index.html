@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cristina Amaral</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <script src="script.js" defer></script>
 </head>
-<script src="script.js"></script>
 <body>
+    <div>
     <video autoplay muted loop id="videoBG">
         <source src="/Media/Videos/fogaodelenha_1.mp4" type="video/mp4">
     </video>
-    <nav>
-        <a href="index.html">
-            <img class="logo" src="/Media/Images/cristinalogo.webp" alt="logo">
-        </a>
-        <ul>
-            <li><a href="">Agenda</a></li>
-            <li><a href="">Discografia</a></li>
-            <li><a href="">Contato</a></li>
+    </div>
+    <div>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <div class="logo">
+            <a href="index.html"><img src="Media/Images/cristinalogo.webp" alt="logo"></a>
+        </div>
+        <ul class="nav-links">
+          <i class="uil uil-times navCloseBtn"></i>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#">Discografia</a></li>
+          <li><a href="contact.html">Contato</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
     <div class="ouca">
         <img id="imgouca" src="/Media/Images/ouçaagora.webp" alt="img">
-        <div class="song">
-            <a href="https://open.spotify.com/intl-pt/track/2dBoxqu3qEwTF5Oxdi0mfC?si=ea0fc4873a3a48e7">
-                <img id="imgfogao" src="/Media/Images/fogaodelenha-capa.jpg" alt="img">
-            </a>
+        <div class="fogao">
+        <a href="https://open.spotify.com/intl-pt/track/2dBoxqu3qEwTF5Oxdi0mfC?si=ea0fc4873a3a48e7">
+            <img id="imgfogao" src="/Media/Images/fogaodelenha-capa.jpg" alt="img">
+        </a>
         </div>
+    </div>
 </body>
 </html>
