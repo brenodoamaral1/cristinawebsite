@@ -74,6 +74,18 @@ input[type="submit"]:hover {
     align-items: center;
     gap: 10px;
 }
+
+#imgDisc{
+    width: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+
+#imgDisc:hover{
+    transform:scale(1.1)
+}
+
 @media screen and (max-width: 768px) {
     .footer{
         position: relative;

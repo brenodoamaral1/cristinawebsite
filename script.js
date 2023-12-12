@@ -13,10 +13,10 @@ navCloseBtn.addEventListener("click", () => {
 });
 
 function validateForm() {
-  var name = document.forms["contactForm"]["name"].value;
-  var email = document.forms["contactForm"]["email"].value;
-  var message = document.forms["contactForm"]["message"].value;
-  var error = "";
+  let name = document.forms["contactForm"]["name"].value;
+  let email = document.forms["contactForm"]["email"].value;
+  let message = document.forms["contactForm"]["message"].value;
+  let error = "";
 
   if (name == "") {
       error += "Por favor insira seu nome.\n";
@@ -39,6 +39,6 @@ function validateForm() {
 }
 
 function validateEmail(email) {
-  var re = /\S+@\S+\.\S+/;
+  let re = /\S+@\S+\.\S+/;
   return re.test(email);
 }
